@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://1bvm8bg6lgnh"]
+
+[ext_resource type="PackedScene" uid="uid://cbg2c58c8unfj" path="res://objects/barrier.tscn" id="3_f1se5"]
+[ext_resource type="Texture2D" uid="uid://dypd0whrof4al" path="res://icon.svg" id="5_afk8s"]
+[ext_resource type="PackedScene" uid="uid://bn7cpvww5kuge" path="res://entities/player/player.tscn" id="5_li2jj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gaw8"]
+size = Vector2(127.523476, 28.95475)
+
+[node name="Tela1" type="Node2D" unique_id=352835573]
+
+[node name="Player2" parent="." unique_id=1046408071 instance=ExtResource("5_li2jj")]
+position = Vector2(96, 424)
+scale = Vector2(0.3893628, 0.3893628)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1099619894]
+position = Vector2(576, 590)
+scale = Vector2(9.017947, 0.9207857)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1672161233]
+position = Vector2(-0.110889435, 1.6289673)
+scale = Vector2(1, 4.3884096)
+shape = SubResource("RectangleShape2D_1gaw8")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=707906646]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+texture = ExtResource("5_afk8s")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=53312998]
+position = Vector2(1394.0001, 487.00003)
+scale = Vector2(3.1157982, 0.35728025)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1471228114]
+position = Vector2(-0.110889435, 1.6289673)
+scale = Vector2(1, 4.3884096)
+shape = SubResource("RectangleShape2D_1gaw8")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=246582069]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+texture = ExtResource("5_afk8s")
+
+[node name="Barreira" parent="." unique_id=437015030 instance=ExtResource("3_f1se5")]
+position = Vector2(1378, 464)
+scale = Vector2(1.6467843, -12.683979)
+barrier_color = Color(0.9882353, 0, 1, 1)
