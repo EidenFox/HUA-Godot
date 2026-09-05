@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://c4qm7a3wsttye"]
+
+[ext_resource type="PackedScene" uid="uid://cbg2c58c8unfj" path="res://objects/barrier.tscn" id="1_6x8wa"]
+[ext_resource type="PackedScene" uid="uid://bn7cpvww5kuge" path="res://entities/player/player.tscn" id="2_hq7uk"]
+[ext_resource type="Script" uid="uid://dyl1ekscqh7tn" path="res://scene/phase-1/player_Phase1.gd" id="3_dxox4"]
+[ext_resource type="PackedScene" uid="uid://cj0s4o88whqtc" path="res://objects/solid.tscn" id="4_41u14"]
+
+[node name="Phase1" type="Node2D" unique_id=1036716441]
+
+[node name="Barriers" type="Node2D" parent="." unique_id=254410370]
+position = Vector2(821, -9)
+
+[node name="Barreira" parent="Barriers" unique_id=635477123 instance=ExtResource("1_6x8wa")]
+position = Vector2(2269, 617)
+scale = Vector2(43.68754, -101.07053)
+barrier_color = Color(1, 0, 0, 1)
+
+[node name="Barreira2" parent="Barriers" unique_id=437015030 instance=ExtResource("1_6x8wa")]
+position = Vector2(4333, 458.99997)
+scale = Vector2(8.012455, -94.16125)
+barrier_color = Color(0, 0, 1, 1)
+
+[node name="Barreira3" parent="Barriers" unique_id=1821207792 instance=ExtResource("1_6x8wa")]
+position = Vector2(4814, 445.99997)
+scale = Vector2(8.012455, -94.16125)
+barrier_color = Color(0, 1, 0, 1)
+
+[node name="Barreira4" parent="Barriers" unique_id=2037888683 instance=ExtResource("1_6x8wa")]
+position = Vector2(5314.0005, 445.99997)
+scale = Vector2(8.012455, -94.16125)
+barrier_color = Color(1, 0, 0, 1)
+
+[node name="Barreira5" parent="Barriers" unique_id=232390145 instance=ExtResource("1_6x8wa")]
+position = Vector2(6175, 220)
+scale = Vector2(33.36788, 4.0319657)
+barrier_color = Color(1, 0, 0, 1)
+
+[node name="Barreira6" parent="Barriers" unique_id=898493839 instance=ExtResource("1_6x8wa")]
+position = Vector2(6919, 49.000015)
+scale = Vector2(33.36788, 4.0319657)
+barrier_color = Color(0, 1, 0, 1)
+
+[node name="Barreira7" parent="Barriers" unique_id=1320892456 instance=ExtResource("1_6x8wa")]
+position = Vector2(7759, -122.99998)
+scale = Vector2(33.36788, 4.0319657)
+barrier_color = Color(0, 0, 1, 1)
+
+[node name="Barreira8" parent="Barriers" unique_id=2002297412 instance=ExtResource("1_6x8wa")]
+position = Vector2(8782, -131)
+scale = Vector2(33.36788, 4.0319657)
+barrier_color = Color(0, 0, 1, 1)
+
+[node name="Barreira9" parent="Barriers" unique_id=2009303184 instance=ExtResource("1_6x8wa")]
+position = Vector2(8544, -42.99997)
+scale = Vector2(5.154708, -42.377228)
+barrier_color = Color(1, 0, 0, 1)
+
+[node name="Textos" type="Node2D" parent="." unique_id=220272607]
+position = Vector2(484, -107)
+
+[node name="Label" type="Label" parent="Textos" unique_id=980388792]
+offset_left = 334.0
+offset_top = -66.999985
+offset_right = 604.0
+offset_bottom = 8.000015
+scale = Vector2(2.3533268, 2.3533268)
+text = "Olá, seja bem vindo a HUA.
+Este jogo é baseado no conceito de
+\"COR e PERSPECTIVA\""
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Textos" unique_id=503027569]
+offset_left = 1734.0
+offset_top = -81.0
+offset_right = 1769.1196
+offset_bottom = -56.497925
+scale = Vector2(1.2243863, 1.2243863)
+theme_override_colors/font_color = Color(0.36659443, 0.36659467, 0.36659455, 1)
+text = "67"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Textos" unique_id=1367299074]
+offset_left = 1495.9999
+offset_top = -66.999985
+offset_right = 1765.9999
+offset_bottom = 8.000015
+scale = Vector2(2.3533268, 2.3533268)
+text = "Existe uma Aura ao redor do personagem
+esta Aura é a sua habilidade
+\"Manipular Cores\"."
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Textos" unique_id=1656082805]
+offset_left = 1603.0
+offset_top = 510.0
+offset_right = 1831.6125
+offset_bottom = 570.765
+scale = Vector2(2.3533268, 2.3533268)
+text = "Aperte \"Q\" para
+ abrir seu seletor decores"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Textos" unique_id=44307754]
+offset_left = 2608.0
+offset_top = -101.0
+offset_right = 2929.0
+offset_bottom = -26.0
+scale = Vector2(2.3533268, 2.3533268)
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Tente igualar a cor da sua aura
+com a cor da parere."
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Textos" unique_id=1609653470]
+offset_left = 3762.9995
+offset_top = -129.0
+offset_right = 4194.9995
+offset_bottom = -28.0
+scale = Vector2(2.3533268, 2.3533268)
+text = "Incrivel!
+Agora que você já sabe
+como controlar sua habilidade
+Vamos colocar em Pratica"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Textos" unique_id=144887119]
+offset_left = 6299.0
+offset_top = -129.0
+offset_right = 6731.0
+offset_bottom = -28.0
+scale = Vector2(2.3533268, 2.3533268)
+text = "Vamos dificultar um pouco"
+horizontal_alignment = 1
+
+[node name="Player" parent="." unique_id=1046408071 instance=ExtResource("2_hq7uk")]
+position = Vector2(275, 292)
+script = ExtResource("3_dxox4")
+
+[node name="Map" type="Node2D" parent="." unique_id=1629887857]
+position = Vector2(67, -131)
+
+[node name="Solid2" parent="Map" unique_id=435454029 instance=ExtResource("4_41u14")]
+position = Vector2(-129, 942)
+scale = Vector2(9.745299, -136.7857)
+
+[node name="Solid" parent="Map" unique_id=1430129423 instance=ExtResource("4_41u14")]
+position = Vector2(-82.99999, 524)
+scale = Vector2(925.6954, 24.325909)
+
+[node name="Solid3" parent="Map" unique_id=102428113 instance=ExtResource("4_41u14")]
+position = Vector2(10217, 561)
+scale = Vector2(10.002763, -34.77549)

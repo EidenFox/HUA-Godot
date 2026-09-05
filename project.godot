@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Projeto-1"
-run/main_scene="res://scene/tela1.tscn"
+run/main_scene="uid://c4qm7a3wsttye"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
