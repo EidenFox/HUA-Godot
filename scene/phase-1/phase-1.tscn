@@ -2,10 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://cbg2c58c8unfj" path="res://objects/barrier.tscn" id="1_6x8wa"]
 [ext_resource type="PackedScene" uid="uid://bn7cpvww5kuge" path="res://entities/player/player.tscn" id="2_hq7uk"]
-[ext_resource type="Script" uid="uid://dyl1ekscqh7tn" path="res://scene/phase-1/player_Phase1.gd" id="3_dxox4"]
 [ext_resource type="PackedScene" uid="uid://cj0s4o88whqtc" path="res://objects/solid.tscn" id="4_41u14"]
+[ext_resource type="PackedScene" uid="uid://chm5n0yx6o4al" path="res://objects/noDoubleJump.tscn" id="5_hq7uk"]
 
 [node name="Phase1" type="Node2D" unique_id=1036716441]
+
+[node name="NoDoubleJump" parent="." unique_id=1890158861 instance=ExtResource("5_hq7uk")]
+position = Vector2(-11, -1636.9999)
+scale = Vector2(523.50336, 115.80072)
 
 [node name="Barriers" type="Node2D" parent="." unique_id=254410370]
 position = Vector2(821, -9)
@@ -43,17 +47,31 @@ barrier_color = Color(0, 1, 0, 1)
 [node name="Barreira7" parent="Barriers" unique_id=1320892456 instance=ExtResource("1_6x8wa")]
 position = Vector2(7759, -122.99998)
 scale = Vector2(33.36788, 4.0319657)
-barrier_color = Color(0, 0, 1, 1)
-
-[node name="Barreira8" parent="Barriers" unique_id=2002297412 instance=ExtResource("1_6x8wa")]
-position = Vector2(8782, -131)
-scale = Vector2(33.36788, 4.0319657)
-barrier_color = Color(0, 0, 1, 1)
+barrier_color = Color(1, 0, 0, 1)
 
 [node name="Barreira9" parent="Barriers" unique_id=2009303184 instance=ExtResource("1_6x8wa")]
 position = Vector2(8544, -42.99997)
 scale = Vector2(5.154708, -42.377228)
 barrier_color = Color(1, 0, 0, 1)
+
+[node name="Barreira8" parent="Barriers" unique_id=2002297412 instance=ExtResource("1_6x8wa")]
+position = Vector2(8782, -131)
+scale = Vector2(33.367886, 4.0319657)
+barrier_color = Color(1, 0, 0, 1)
+
+[node name="Barreira10" parent="Barriers" unique_id=172699006 instance=ExtResource("1_6x8wa")]
+position = Vector2(10815.999, 433)
+scale = Vector2(5.1547074, -42.377224)
+
+[node name="Barreira11" parent="Barriers" unique_id=309382779 instance=ExtResource("1_6x8wa")]
+position = Vector2(11142, 433)
+scale = Vector2(5.1547074, -42.377224)
+barrier_color = Color(0, 1, 1, 1)
+
+[node name="Barreira12" parent="Barriers" unique_id=555796151 instance=ExtResource("1_6x8wa")]
+position = Vector2(11494, 433)
+scale = Vector2(5.1547074, -42.377224)
+barrier_color = Color(1, 1, 0, 1)
 
 [node name="Textos" type="Node2D" parent="." unique_id=220272607]
 position = Vector2(484, -107)
@@ -133,8 +151,7 @@ text = "Vamos dificultar um pouco"
 horizontal_alignment = 1
 
 [node name="Player" parent="." unique_id=1046408071 instance=ExtResource("2_hq7uk")]
-position = Vector2(275, 292)
-script = ExtResource("3_dxox4")
+position = Vector2(271, 271)
 
 [node name="Map" type="Node2D" parent="." unique_id=1629887857]
 position = Vector2(67, -131)

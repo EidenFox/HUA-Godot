@@ -14,12 +14,3 @@ var current_aura_color: Color = COLOR_DEFAULT:
 	set(value):
 		current_aura_color = value
 		aura_color_changed.emit(value)
-
-func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_UP:
-			current_aura_color = COLOR_RED
-		elif event.keycode == KEY_LEFT:
-			current_aura_color = COLOR_GREEN
-		elif event.keycode == KEY_RIGHT:
-			current_aura_color = COLOR_BLUE

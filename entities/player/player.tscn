@@ -10,11 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://dlh53on3u0cts" path="res://data/sprites/player/fox/idle/raposo4.png" id="8_j3ovn"]
 [ext_resource type="Texture2D" uid="uid://iri4sdqc2jam" path="res://data/sprites/player/fox/idle/raposo5.png" id="9_afbqv"]
 [ext_resource type="Texture2D" uid="uid://drw5chl4wt0xm" path="res://data/sprites/player/fox/idle/raposo6.png" id="10_gx6sm"]
+[ext_resource type="PackedScene" uid="uid://t6ybnqypefvv" path="res://data/UI/color_ui.tscn" id="11_7thud"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oyuhy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6gri"]
-size = Vector2(210, 256)
+size = Vector2(178, 265)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
 atlas = ExtResource("1_e4p34")
@@ -234,7 +235,7 @@ scale = Vector2(28.567476, 28.567476)
 shape = SubResource("CircleShape2D_oyuhy")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1444978531]
-position = Vector2(-48.00003, -26)
+position = Vector2(-41, -30.5)
 shape = SubResource("RectangleShape2D_x6gri")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=416899989]
@@ -245,7 +246,7 @@ texture_filter = 1
 position = Vector2(40, -75)
 scale = Vector2(4.1041675, 4.1041665)
 sprite_frames = SubResource("SpriteFrames_oyuhy")
-animation = &"Run"
+animation = &"Idle"
 
 [node name="Raposo" type="AnimatedSprite2D" parent="Pivot" unique_id=336914517]
 texture_filter = 1
@@ -254,7 +255,7 @@ scale = Vector2(3.4386487, 3.4386487)
 sprite_frames = SubResource("SpriteFrames_55h2j")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.73432165
+frame_progress = 0.45067593
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1444888323]
 offset = Vector2(-50, -30)
@@ -265,3 +266,17 @@ limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="HID" type="CanvasLayer" parent="." unique_id=769155009]
+
+[node name="ColorUi" parent="HID" unique_id=2037593997 instance=ExtResource("11_7thud")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 641.0
+offset_top = 81.0
+offset_right = 641.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.59415936, 0.59415936)

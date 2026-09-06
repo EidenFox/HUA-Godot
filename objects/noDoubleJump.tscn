@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://chm5n0yx6o4al"]
+
+[ext_resource type="Script" uid="uid://bhwhidhtynkuk" path="res://objects/scripts/no_double_jump.gd" id="1_n3sha"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3sha"]
+
+[node name="NoDoubleJump" type="Area2D" unique_id=1890158861]
+script = ExtResource("1_n3sha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=241288919]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_n3sha")
+debug_color = Color(1, 1, 1, 0)

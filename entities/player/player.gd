@@ -4,7 +4,8 @@ const SPEED = 500.0
 const JUMP_VELOCITY = -700.0
 
 @onready var pivot: Node2D = $Pivot
-@onready var player_sprite: AnimatedSprite2D = $Pivot/PlayerSprite
+@onready var player_spriteD: AnimatedSprite2D = $Pivot/PlayerSprite
+@onready var player_sprite: AnimatedSprite2D = $Pivot/Raposo
 @onready var player_collision: CollisionShape2D = $PlayerCollision
 @onready var aura_area: Area2D = $aura_area
 @onready var aura_shape: CollisionShape2D = $aura_area/radius
@@ -68,22 +69,26 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_pressed("run"):
 			velocity.x = direction * SPEED * 1.5
 			player_sprite.play("Run")
+			player_spriteD.play("Run")
+			
 		else:
 			velocity.x = direction * SPEED
 			player_sprite.play("Walk");
+			player_spriteD.play("Walk");
 		
 		if direction < 0:
 			pivot.scale.x = -1
-			player_collision.position.x = 50
+			player_collision.position.x = 45
 			aura_shape.position.x = 40
 			queue_redraw()
 		else:
 			pivot.scale.x = 1
-			player_collision.position.x = -50
+			player_collision.position.x = -45
 			aura_shape.position.x = -40
 			queue_redraw()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		player_sprite.play("Idle");
+		player_spriteD.play("Idle");
 
 	move_and_slide()
