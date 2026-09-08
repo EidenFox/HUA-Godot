@@ -11,12 +11,18 @@
 [ext_resource type="Texture2D" uid="uid://iri4sdqc2jam" path="res://data/sprites/player/fox/idle/raposo5.png" id="9_afbqv"]
 [ext_resource type="Texture2D" uid="uid://drw5chl4wt0xm" path="res://data/sprites/player/fox/idle/raposo6.png" id="10_gx6sm"]
 [ext_resource type="PackedScene" uid="uid://t6ybnqypefvv" path="res://data/UI/color_ui.tscn" id="11_7thud"]
+[ext_resource type="Texture2D" uid="uid://s2xd6ll0iy54" path="res://data/sprites/player/fox/run/raposorun1.png" id="11_ghoj8"]
 [ext_resource type="Texture2D" uid="uid://m13dhw2y0mu5" path="res://data/sprites/player/fox/walk/raposowalk1.png" id="11_yqrof"]
 [ext_resource type="Texture2D" uid="uid://ceo5hbusxg28p" path="res://data/sprites/player/fox/walk/raposowalk2.png" id="12_3wlsy"]
+[ext_resource type="Texture2D" uid="uid://ddii2ucosjtn1" path="res://data/sprites/player/fox/run/raposorun2.png" id="12_t1t22"]
+[ext_resource type="Texture2D" uid="uid://ba8qboc1yard" path="res://data/sprites/player/fox/run/raposorun3.png" id="13_50fht"]
 [ext_resource type="Texture2D" uid="uid://dn76clx2rcnyb" path="res://data/sprites/player/fox/walk/raposowalk3.png" id="13_b2kln"]
 [ext_resource type="Texture2D" uid="uid://o8n4bwkxahso" path="res://data/sprites/player/fox/walk/raposowalk4.png" id="14_we0b7"]
+[ext_resource type="Texture2D" uid="uid://dbvh2rgvyktv6" path="res://data/sprites/player/fox/run/raposorun4.png" id="14_wuv6x"]
 [ext_resource type="Texture2D" uid="uid://15o15fyjtx1y" path="res://data/sprites/player/fox/walk/raposowalk5.png" id="15_mtric"]
+[ext_resource type="Texture2D" uid="uid://mcirjqntv0yv" path="res://data/sprites/player/fox/run/raposorun5.png" id="15_qpopc"]
 [ext_resource type="Texture2D" uid="uid://btivncauiuqe5" path="res://data/sprites/player/fox/walk/raposowalk6.png" id="16_eyb6c"]
+[ext_resource type="Texture2D" uid="uid://bqynlghye5xjt" path="res://data/sprites/player/fox/run/raposorun6.png" id="16_wq0jh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oyuhy"]
 
@@ -230,22 +236,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_yqrof")
+"texture": ExtResource("11_ghoj8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_3wlsy")
+"texture": ExtResource("12_t1t22")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_b2kln")
+"texture": ExtResource("13_50fht")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_we0b7")
+"texture": ExtResource("14_wuv6x")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_mtric")
+"texture": ExtResource("15_qpopc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_eyb6c")
+"texture": ExtResource("16_wq0jh")
 }],
 "loop": 1,
 "name": &"Run",
@@ -272,7 +278,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Walk",
-"speed": 7.0
+"speed": 6.0
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=1046408071]
@@ -307,7 +313,7 @@ scale = Vector2(3.4386487, 3.4386487)
 sprite_frames = SubResource("SpriteFrames_55h2j")
 animation = &"Run"
 autoplay = "Idle"
-frame_progress = 0.47892353
+frame_progress = 0.7964923
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1444888323]
 offset = Vector2(-50, -30)
