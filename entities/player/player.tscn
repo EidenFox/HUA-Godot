@@ -10,6 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://dlh53on3u0cts" path="res://data/sprites/player/fox/idle/raposo4.png" id="8_j3ovn"]
 [ext_resource type="Texture2D" uid="uid://iri4sdqc2jam" path="res://data/sprites/player/fox/idle/raposo5.png" id="9_afbqv"]
 [ext_resource type="Texture2D" uid="uid://drw5chl4wt0xm" path="res://data/sprites/player/fox/idle/raposo6.png" id="10_gx6sm"]
+[ext_resource type="Texture2D" uid="uid://m13dhw2y0mu5" path="res://data/sprites/player/fox/walk/raposowalk1.png" id="11_yqrof"]
+[ext_resource type="Texture2D" uid="uid://ceo5hbusxg28p" path="res://data/sprites/player/fox/walk/raposowalk2.png" id="12_3wlsy"]
+[ext_resource type="Texture2D" uid="uid://dn76clx2rcnyb" path="res://data/sprites/player/fox/walk/raposowalk3.png" id="13_b2kln"]
+[ext_resource type="Texture2D" uid="uid://o8n4bwkxahso" path="res://data/sprites/player/fox/walk/raposowalk4.png" id="14_we0b7"]
+[ext_resource type="Texture2D" uid="uid://15o15fyjtx1y" path="res://data/sprites/player/fox/walk/raposowalk5.png" id="15_mtric"]
+[ext_resource type="Texture2D" uid="uid://btivncauiuqe5" path="res://data/sprites/player/fox/walk/raposowalk6.png" id="16_eyb6c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oyuhy"]
 
@@ -196,6 +202,24 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_221hk"]
+load_path = "res://.godot/imported/raposorun1.png-4601874acb6697c0d587ed7cef9eb1b8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ghoj8"]
+load_path = "res://.godot/imported/raposorun2.png-b0fc894566b54915376805399340a8f7.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t1t22"]
+load_path = "res://.godot/imported/raposorun3.png-3c5c54c8a1e06cb71b3dd496c62ff11b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_50fht"]
+load_path = "res://.godot/imported/raposorun4.png-2cff1d65ccedfa62021f32df107f8210.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wuv6x"]
+load_path = "res://.godot/imported/raposorun5.png-41bbed950723bbcc4872cf7406491312.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qpopc"]
+load_path = "res://.godot/imported/raposorun6.png-49cb51eabccb0516cfa516f35a4cc013.ctex"
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_55h2j"]
 animations = [{
 "frames": [{
@@ -219,6 +243,52 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_221hk")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ghoj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_t1t22")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_50fht")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_wuv6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_qpopc")
+}],
+"loop": 1,
+"name": &"Run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_yqrof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3wlsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_b2kln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_we0b7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mtric")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_eyb6c")
+}],
+"loop": 1,
+"name": &"Walk",
 "speed": 10.0
 }]
 
@@ -252,9 +322,9 @@ texture_filter = 1
 position = Vector2(-37, -119)
 scale = Vector2(3.4386487, 3.4386487)
 sprite_frames = SubResource("SpriteFrames_55h2j")
-animation = &"Idle"
+animation = &"Walk"
 autoplay = "Idle"
-frame_progress = 0.73432165
+frame_progress = 0.43866214
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1444888323]
 offset = Vector2(-50, -30)
