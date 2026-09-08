@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cb8x66mu4j4mn"]
+
+[ext_resource type="PackedScene" uid="uid://bn7cpvww5kuge" path="res://entities/player/player.tscn" id="1_etcyr"]
+[ext_resource type="PackedScene" uid="uid://cj0s4o88whqtc" path="res://objects/solid.tscn" id="2_c0vf4"]
+[ext_resource type="PackedScene" uid="uid://5hawbmd6qvox" path="res://objects/notSolid.tscn" id="3_e2a74"]
+[ext_resource type="PackedScene" uid="uid://cbg2c58c8unfj" path="res://objects/barrier.tscn" id="4_lvh11"]
+
+[node name="Cena" type="Node2D" unique_id=261466747]
+
+[node name="Player" parent="." unique_id=1046408071 instance=ExtResource("1_etcyr")]
+position = Vector2(122106, -342177)
+
+[node name="Solid" parent="." unique_id=437015030 instance=ExtResource("2_c0vf4")]
+position = Vector2(113899, -307839)
+
+[node name="NotSolid" parent="." unique_id=443117904 instance=ExtResource("3_e2a74")]
+position = Vector2(112363, -300671)
+
+[node name="Barreira" parent="." unique_id=2093588084 instance=ExtResource("4_lvh11")]
+position = Vector2(135681, -302724)
+scale = Vector2(1.2409954, -1.3126844)
