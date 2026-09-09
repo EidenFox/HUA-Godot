@@ -52,24 +52,27 @@ func _draw() -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		player_sprite.play("Air");
 		
 	if is_on_floor():
 		djump = baseDJump
 		
 	if Input.is_action_just_pressed("jump") and is_on_floor(): 
 		velocity.y = JUMP_VELOCITY
+		player_sprite.play("Jump");
 	
 	if Input.is_action_just_pressed("jump") and djump >= 1 and not is_on_floor():
 		djump -= 1
 		velocity.y = JUMP_VELOCITY-50
+		player_sprite.play("Jump");
 	
 	var direction := Input.get_axis("left", "right")
 	
 	if direction:
 		if Input.is_action_pressed("run"):
 			velocity.x = direction * SPEED * 1.5
-			player_sprite.play("Run")
-			player_spriteD.play("Run")
+			player_sprite.play("Run");
+			player_spriteD.play("Run");
 			
 		else:
 			velocity.x = direction * SPEED

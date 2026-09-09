@@ -231,7 +231,33 @@ animations = [{
 }],
 "loop": 2,
 "name": &"Air",
-"speed": 7.0
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_geky7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wy7bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_13wue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ttr27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0eo6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_np63p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8q4fm")
+}],
+"loop": 1,
+"name": &"Airtogroundtest",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -280,13 +306,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("18_wy7bt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_geky7")
 }],
 "loop": 0,
 "name": &"Jump",
-"speed": 1.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -367,7 +390,6 @@ scale = Vector2(3.4386487, 3.4386487)
 sprite_frames = SubResource("SpriteFrames_55h2j")
 animation = &"Air"
 autoplay = "Idle"
-frame_progress = 0.25999784
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1444888323]
 offset = Vector2(-50, -30)
