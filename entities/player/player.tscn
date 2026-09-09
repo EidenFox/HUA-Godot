@@ -5,8 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://122viokmhwau" path="res://data/sprites/player/kobold/Sprites/with_outline/IDLE.png" id="2_rfe5m"]
 [ext_resource type="Texture2D" uid="uid://34ojuwfaig0" path="res://data/sprites/player/kobold/Sprites/with_outline/RUN.png" id="3_qly61"]
 [ext_resource type="Texture2D" uid="uid://cx4nkha3gh0yf" path="res://data/sprites/player/fox/idle/raposo1.png" id="5_wvtmh"]
+[ext_resource type="Texture2D" uid="uid://qy655f7b78vp" path="res://data/sprites/player/fox/air/raposoair2.png" id="6_0eo6o"]
 [ext_resource type="Texture2D" uid="uid://530yf78nc4yh" path="res://data/sprites/player/fox/idle/raposo2.png" id="6_7thud"]
 [ext_resource type="Texture2D" uid="uid://2wptthxvobsa" path="res://data/sprites/player/fox/idle/raposo3.png" id="7_a1qjk"]
+[ext_resource type="Texture2D" uid="uid://cq7xfb20nf4q8" path="res://data/sprites/player/fox/air/raposoair3.png" id="7_ttr27"]
 [ext_resource type="Texture2D" uid="uid://dlh53on3u0cts" path="res://data/sprites/player/fox/idle/raposo4.png" id="8_j3ovn"]
 [ext_resource type="Texture2D" uid="uid://iri4sdqc2jam" path="res://data/sprites/player/fox/idle/raposo5.png" id="9_afbqv"]
 [ext_resource type="Texture2D" uid="uid://drw5chl4wt0xm" path="res://data/sprites/player/fox/idle/raposo6.png" id="10_gx6sm"]
@@ -222,6 +224,17 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_0eo6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ttr27")
+}],
+"loop": 2,
+"name": &"Air",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("5_wvtmh")
 }, {
 "duration": 1.0,
@@ -273,7 +286,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"Jump",
-"speed": 18.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -352,9 +365,9 @@ texture_filter = 1
 position = Vector2(-37, -119)
 scale = Vector2(3.4386487, 3.4386487)
 sprite_frames = SubResource("SpriteFrames_55h2j")
-animation = &"Jump"
+animation = &"Air"
 autoplay = "Idle"
-frame_progress = 0.8605677
+frame_progress = 0.25999784
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1444888323]
 offset = Vector2(-50, -30)
