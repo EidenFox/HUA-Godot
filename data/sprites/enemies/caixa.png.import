@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://botk8if3t4p6q"
-path="res://.godot/imported/Rock Mountains.png-fe96a6e4a14b536298bf0b42aa8d1410.ctex"
+uid="uid://nnky37bt25ko"
+path="res://.godot/imported/caixa.png-1845974f936457f2327d4e89fd3161c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/scenary/Backgrounds/Rock Mountains.png"
-dest_files=["res://.godot/imported/Rock Mountains.png-fe96a6e4a14b536298bf0b42aa8d1410.ctex"]
+source_file="res://data/sprites/enemies/caixa.png"
+dest_files=["res://.godot/imported/caixa.png-1845974f936457f2327d4e89fd3161c1.ctex"]
 
 [params]
 

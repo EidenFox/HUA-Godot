@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqqmji82ecu2q"
-path="res://.godot/imported/Bubbling_Oil_frames (16 x 32).png-50ded16cfdef8408950e2287d4f67984.ctex"
+uid="uid://cu7boboc337l2"
+path="res://.godot/imported/caixa.png-ff4f00b6c31a9f1cfa7a2433783e03fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/scenary/Seasonal Tilesets/5 - Misc. universal tiles/Bubbling_Oil_frames (16 x 32).png"
-dest_files=["res://.godot/imported/Bubbling_Oil_frames (16 x 32).png-50ded16cfdef8408950e2287d4f67984.ctex"]
+source_file="res://data/scenary/Tiles/caixa.png"
+dest_files=["res://.godot/imported/caixa.png-ff4f00b6c31a9f1cfa7a2433783e03fe.ctex"]
 
 [params]
 

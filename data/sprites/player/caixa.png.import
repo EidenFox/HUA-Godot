@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuiwdkxumlia1"
-path="res://.godot/imported/Lava_frames (16 x 32).png-40ab44f0197875313f237ca08be7bfdb.ctex"
+uid="uid://b15p77lilqlf2"
+path="res://.godot/imported/caixa.png-e40bf435dc3f4fece38024e3acdb90be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/scenary/Seasonal Tilesets/5 - Misc. universal tiles/Lava_frames (16 x 32).png"
-dest_files=["res://.godot/imported/Lava_frames (16 x 32).png-40ab44f0197875313f237ca08be7bfdb.ctex"]
+source_file="res://data/sprites/player/caixa.png"
+dest_files=["res://.godot/imported/caixa.png-e40bf435dc3f4fece38024e3acdb90be.ctex"]
 
 [params]
 
