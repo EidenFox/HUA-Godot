@@ -11,6 +11,7 @@ const JUMP_VELOCITY = -700.0
 @onready var aura_shape: CollisionShape2D = $aura_area/radius
 
 var wasInAir = false
+var justDJumped = false
 var djump = 0
 var baseDJump = 1
 
@@ -67,6 +68,13 @@ func _update_animations(direction: float) -> void:
 		player_sprite.play("Jump")
 		player_spriteD.play("Jump")
 		
+		if justDJumped == true and Input.is_action_just_pressed("jump"):
+			justDJumped = false
+			player_sprite.stop();
+			player_spriteD.stop();
+			player_sprite.play("Jump")
+			player_spriteD.play("Jump")
+			
 		
 	
 	# 3. Animações no Chão (Correndo vs Andando vs Parado)
@@ -94,6 +102,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 	
 	if Input.is_action_just_pressed("jump") and djump >= 1 and not is_on_floor():
+		justDJumped = true
 		djump -= 1
 		velocity.y = JUMP_VELOCITY - 50
 	

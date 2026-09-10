@@ -29,7 +29,6 @@
 [ext_resource type="Texture2D" uid="uid://bqynlghye5xjt" path="res://data/sprites/player/fox/run/raposorun6.png" id="16_wq0jh"]
 [ext_resource type="Texture2D" uid="uid://io4dy6176ejl" path="res://data/sprites/player/fox/jump/raposojump7.png" id="17_13wue"]
 [ext_resource type="Texture2D" uid="uid://cqjilmejt6spl" path="res://data/sprites/player/fox/jump/raposojump8.png" id="18_wy7bt"]
-[ext_resource type="Texture2D" uid="uid://yjbdrml871fw" path="res://data/sprites/player/fox/jump/raposojump9.png" id="19_geky7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oyuhy"]
 
@@ -220,43 +219,6 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("18_wy7bt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_geky7")
-}],
-"loop": 0,
-"name": &"Air",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_geky7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_wy7bt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_13wue")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_ttr27")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_0eo6o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_np63p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_8q4fm")
-}],
-"loop": 1,
-"name": &"Airtogroundtest",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("5_wvtmh")
 }, {
 "duration": 1.0,
@@ -378,7 +340,7 @@ texture_filter = 1
 position = Vector2(-37, -119)
 scale = Vector2(3.4386487, 3.4386487)
 sprite_frames = SubResource("SpriteFrames_55h2j")
-animation = &"Jump"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1444888323]
