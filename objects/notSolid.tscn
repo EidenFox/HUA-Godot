@@ -1,21 +1,7 @@
 [gd_scene format=3 uid="uid://5hawbmd6qvox"]
 
-[ext_resource type="Script" uid="uid://capj3wnsl55uq" path="res://objects/scripts/not_solid.gd" id="1_3124h"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yylro"]
-size = Vector2(18, 18)
-
-[node name="NotSolid" type="StaticBody2D" unique_id=437015030]
-script = ExtResource("1_3124h")
-not_solid_color = Color(0.16862746, 0.16862746, 0.16862746, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=440759332]
-position = Vector2(9, 9)
-shape = SubResource("RectangleShape2D_yylro")
-disabled = true
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1867558262]
+[node name="ColorRect" type="ColorRect" unique_id=723267599]
+z_index = 5
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(0.4516661, 0.4516661)
-color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+color = Color(0.40392157, 0.40392157, 0.40392157, 1)

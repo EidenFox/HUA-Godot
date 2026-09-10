@@ -3,17 +3,17 @@
 [ext_resource type="Script" uid="uid://pdsvd5rt5w36" path="res://objects/scripts/barrier.gd" id="1_labj8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yylro"]
-size = Vector2(18, 18)
+resource_local_to_scene = true
 
 [node name="Barreira" type="StaticBody2D" unique_id=437015030]
+collision_layer = 3
 script = ExtResource("1_labj8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=440759332]
-position = Vector2(9, 9)
+position = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_yylro")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1867558262]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.4516661, 0.4516661)
+offset_right = 20.0
+offset_bottom = 20.0
 color = Color(1, 0, 1, 1)

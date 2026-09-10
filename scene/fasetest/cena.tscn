@@ -2,12 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bn7cpvww5kuge" path="res://entities/player/player.tscn" id="1_etcyr"]
 [ext_resource type="PackedScene" uid="uid://cj0s4o88whqtc" path="res://objects/solid.tscn" id="2_c0vf4"]
+[ext_resource type="PackedScene" uid="uid://5hawbmd6qvox" path="res://objects/notSolid.tscn" id="4_etcyr"]
 [ext_resource type="PackedScene" uid="uid://chm5n0yx6o4al" path="res://objects/noDoubleJump.tscn" id="5_c0vf4"]
+[ext_resource type="PackedScene" uid="uid://cbg2c58c8unfj" path="res://objects/barrier.tscn" id="5_e2a74"]
 
 [node name="Cena" type="Node2D" unique_id=261466747]
-
-[node name="Player" parent="." unique_id=1046408071 instance=ExtResource("1_etcyr")]
-position = Vector2(1137, -3339)
 
 [node name="Solid2" parent="." unique_id=437015030 instance=ExtResource("2_c0vf4")]
 position = Vector2(1023, -2954)
@@ -23,5 +22,20 @@ rotation = -1.5707964
 scale = Vector2(105.241905, 8.41565)
 
 [node name="NoDoubleJump" parent="." unique_id=1890158861 instance=ExtResource("5_c0vf4")]
-position = Vector2(2560, -3283)
-scale = Vector2(15.506159, 15.724032)
+position = Vector2(1023, -2802)
+scale = Vector2(33.18347, -41.36243)
+
+[node name="NotSolid" parent="." unique_id=1168842987 instance=ExtResource("4_etcyr")]
+offset_left = 1689.0
+offset_top = -3627.0
+offset_right = 1729.0
+offset_bottom = -3587.0
+scale = Vector2(10.418281, 20.147446)
+
+[node name="Player" parent="." unique_id=1046408071 instance=ExtResource("1_etcyr")]
+position = Vector2(1394, -3241)
+
+[node name="Barreira" parent="." unique_id=1576445306 instance=ExtResource("5_e2a74")]
+position = Vector2(1915, -4082)
+scale = Vector2(21.057959, 61.863857)
+barrier_type = 5

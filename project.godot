@@ -73,6 +73,11 @@ color_blue={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Mundo_Solido"
+2d_physics/layer_2="Sensor_Aura"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
