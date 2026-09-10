@@ -13,7 +13,7 @@ const JUMP_VELOCITY = -700.0
 var wasInAir = false
 var justDJumped = false
 var djump = 0
-var baseDJump = 1
+var baseDJump = 3
 
 func _ready() -> void:
 	GlobalState.aura_color_changed.connect(_on_aura_color_changed)

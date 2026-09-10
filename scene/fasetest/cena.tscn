@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bn7cpvww5kuge" path="res://entities/player/player.tscn" id="1_etcyr"]
 [ext_resource type="PackedScene" uid="uid://cj0s4o88whqtc" path="res://objects/solid.tscn" id="2_c0vf4"]
+[ext_resource type="PackedScene" uid="uid://chm5n0yx6o4al" path="res://objects/noDoubleJump.tscn" id="5_c0vf4"]
 
 [node name="Cena" type="Node2D" unique_id=261466747]
 
@@ -20,3 +21,7 @@ scale = Vector2(105.241905, 8.41565)
 position = Vector2(3376, -2816)
 rotation = -1.5707964
 scale = Vector2(105.241905, 8.41565)
+
+[node name="NoDoubleJump" parent="." unique_id=1890158861 instance=ExtResource("5_c0vf4")]
+position = Vector2(2560, -3283)
+scale = Vector2(15.506159, 15.724032)
