@@ -64,13 +64,10 @@ func _update_animations(direction: float) -> void:
 
 	# 2. Animações no Ar (Pulo vs Caindo)
 	if not is_on_floor():
-		print(velocity.y)
-		if velocity.y < 0:
-			player_sprite.play("Jump")
-			player_spriteD.play("Jump")
-		else:
-			player_sprite.play("Air")
-			player_spriteD.play("Air")
+		player_sprite.play("Jump")
+		player_spriteD.play("Jump")
+		
+		
 	
 	# 3. Animações no Chão (Correndo vs Andando vs Parado)
 	else:
