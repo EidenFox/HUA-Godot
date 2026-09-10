@@ -10,6 +10,7 @@ const JUMP_VELOCITY = -700.0
 @onready var aura_area: Area2D = $aura_area
 @onready var aura_shape: CollisionShape2D = $aura_area/radius
 
+var wasInAir = false
 var djump = 0
 var baseDJump = 1
 
@@ -49,35 +50,63 @@ func _draw() -> void:
 	
 	draw_circle(center, radius, aura_color)
 
+#Animações
+func _update_animations(direction: float) -> void:
+	# 1. Checa se acabou de aterrissar (Estava no ar, mas agora está no chão)
+	if wasInAir and is_on_floor():
+		player_sprite.play("Land") # Você precisará criar essa animação
+		player_spriteD.play("Land")
+		return # Interrompe a função para deixar a animação Land tocar
+		
+	# Se a animação de Land estiver tocando, esperamos ela terminar antes de mudar para Idle/Walk
+	if player_sprite.animation == "Land" and player_sprite.is_playing():
+		return
+
+	# 2. Animações no Ar (Pulo vs Caindo)
+	if not is_on_floor():
+		print(velocity.y)
+		if velocity.y < 0:
+			player_sprite.play("Jump")
+			player_spriteD.play("Jump")
+		else:
+			player_sprite.play("Air")
+			player_spriteD.play("Air")
+	
+	# 3. Animações no Chão (Correndo vs Andando vs Parado)
+	else:
+		if direction != 0:
+			if Input.is_action_pressed("run"):
+				player_sprite.play("Run")
+				player_spriteD.play("Run")
+			else:
+				player_sprite.play("Walk")
+				player_spriteD.play("Walk")
+		else:
+			player_sprite.play("Idle")
+			player_spriteD.play("Idle")
+
+# FISICA
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		player_sprite.play("Air");
 		
 	if is_on_floor():
 		djump = baseDJump
 		
 	if Input.is_action_just_pressed("jump") and is_on_floor(): 
 		velocity.y = JUMP_VELOCITY
-		player_sprite.play("Jump");
 	
 	if Input.is_action_just_pressed("jump") and djump >= 1 and not is_on_floor():
 		djump -= 1
-		velocity.y = JUMP_VELOCITY-50
-		player_sprite.play("Jump");
+		velocity.y = JUMP_VELOCITY - 50
 	
 	var direction := Input.get_axis("left", "right")
 	
 	if direction:
 		if Input.is_action_pressed("run"):
 			velocity.x = direction * SPEED * 1.5
-			player_sprite.play("Run");
-			player_spriteD.play("Run");
-			
 		else:
 			velocity.x = direction * SPEED
-			player_sprite.play("Walk");
-			player_spriteD.play("Walk");
 		
 		if direction < 0:
 			pivot.scale.x = -1
@@ -91,7 +120,12 @@ func _physics_process(delta: float) -> void:
 			queue_redraw()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		player_sprite.play("Idle");
-		player_spriteD.play("Idle");
 
+	# Aplica o movimento
 	move_and_slide()
+	
+	# Chama a nova função que vai gerenciar as animações
+	_update_animations(direction)
+	
+	# Atualiza o estado do ar para o PRÓXIMO frame
+	wasInAir = not is_on_floor()

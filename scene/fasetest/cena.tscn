@@ -2,33 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://bn7cpvww5kuge" path="res://entities/player/player.tscn" id="1_etcyr"]
 [ext_resource type="PackedScene" uid="uid://cj0s4o88whqtc" path="res://objects/solid.tscn" id="2_c0vf4"]
-[ext_resource type="PackedScene" uid="uid://5hawbmd6qvox" path="res://objects/notSolid.tscn" id="3_e2a74"]
-[ext_resource type="PackedScene" uid="uid://cbg2c58c8unfj" path="res://objects/barrier.tscn" id="4_lvh11"]
-[ext_resource type="PackedScene" uid="uid://chm5n0yx6o4al" path="res://objects/noDoubleJump.tscn" id="5_c0vf4"]
 
 [node name="Cena" type="Node2D" unique_id=261466747]
 
 [node name="Player" parent="." unique_id=1046408071 instance=ExtResource("1_etcyr")]
-position = Vector2(122106, -342177)
+position = Vector2(1137, -3339)
 
-[node name="Solid" parent="." unique_id=437015030 instance=ExtResource("2_c0vf4")]
-position = Vector2(113899, -307839)
+[node name="Solid2" parent="." unique_id=437015030 instance=ExtResource("2_c0vf4")]
+position = Vector2(1023, -2954)
+scale = Vector2(105.241905, 8.41565)
 
-[node name="NotSolid" parent="." unique_id=443117904 instance=ExtResource("3_e2a74")]
-position = Vector2(112363, -300671)
+[node name="Solid4" parent="." unique_id=1717586819 instance=ExtResource("2_c0vf4")]
+position = Vector2(1694, 470.99988)
+scale = Vector2(105.241905, 8.41565)
 
-[node name="Barreira" parent="." unique_id=2093588084 instance=ExtResource("4_lvh11")]
-position = Vector2(135681, -302724)
-scale = Vector2(1.2409954, -1.3126844)
-
-[node name="Barreira2" parent="." unique_id=179954739 instance=ExtResource("4_lvh11")]
-position = Vector2(4565, 1125)
-
-[node name="NoDoubleJump" parent="." unique_id=1890158861 instance=ExtResource("5_c0vf4")]
-position = Vector2(5717, 416)
-
-[node name="NotSolid2" parent="." unique_id=703712532 instance=ExtResource("3_e2a74")]
-position = Vector2(6978, 770)
-
-[node name="Solid2" parent="." unique_id=725229054 instance=ExtResource("2_c0vf4")]
-position = Vector2(4111, 199)
+[node name="Solid3" parent="." unique_id=331431998 instance=ExtResource("2_c0vf4")]
+position = Vector2(3376, -2816)
+rotation = -1.5707964
+scale = Vector2(105.241905, 8.41565)
