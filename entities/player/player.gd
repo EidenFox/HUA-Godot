@@ -10,7 +10,7 @@ const JUMP_VELOCITY = -700.0
 @onready var aura_shape: CollisionShape2D = $aura_area/radius
 
 var djump = 0
-var baseDJump = 3
+var baseDJump = 0
 
 func _ready() -> void:
 	GlobalState.aura_color_changed.connect(_on_aura_color_changed)

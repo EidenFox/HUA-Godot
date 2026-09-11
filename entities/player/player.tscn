@@ -29,8 +29,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oyuhy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6gri"]
-size = Vector2(178, 265)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13vib"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_55h2j"]
 animations = [{
@@ -148,8 +147,9 @@ scale = Vector2(28.567476, 28.567476)
 shape = SubResource("CircleShape2D_oyuhy")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1444978531]
-position = Vector2(-41, -30.5)
-shape = SubResource("RectangleShape2D_x6gri")
+position = Vector2(-40.999996, -24)
+scale = Vector2(5.955115, 8.244698)
+shape = SubResource("CapsuleShape2D_13vib")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=416899989]
 
@@ -158,7 +158,7 @@ texture_filter = 1
 position = Vector2(-37, -119)
 scale = Vector2(3.4386487, 3.4386487)
 sprite_frames = SubResource("SpriteFrames_55h2j")
-animation = &"Jump"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1444888323]
