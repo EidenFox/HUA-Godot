@@ -29,8 +29,6 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oyuhy"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13vib"]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_55h2j"]
 animations = [{
 "frames": [{
@@ -134,6 +132,9 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wuv6x"]
+radius = 70.028564
+
 [node name="Player" type="CharacterBody2D" unique_id=1046408071]
 z_index = 2
 script = ExtResource("1_bls4j")
@@ -145,11 +146,6 @@ position = Vector2(3, 0)
 position = Vector2(-43, 0)
 scale = Vector2(28.567476, 28.567476)
 shape = SubResource("CircleShape2D_oyuhy")
-
-[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1444978531]
-position = Vector2(-40.999996, -24)
-scale = Vector2(5.955115, 8.244698)
-shape = SubResource("CapsuleShape2D_13vib")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=416899989]
 
@@ -184,3 +180,10 @@ offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.59415936, 0.59415936)
+
+[node name="BodyCollision" type="CollisionPolygon2D" parent="." unique_id=1321747876]
+polygon = PackedVector2Array(-99, 101, -44, 101, 17, 40, 22, -104, -25, -167, -78, -147, -98, -88, -83, -9)
+
+[node name="FeetCollision" type="CollisionShape2D" parent="." unique_id=1060810027]
+position = Vector2(-50, 31)
+shape = SubResource("CircleShape2D_wuv6x")

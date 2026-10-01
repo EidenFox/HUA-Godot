@@ -39,3 +39,15 @@ position = Vector2(1394, -3241)
 position = Vector2(1915, -4082)
 scale = Vector2(21.057959, 61.863857)
 barrier_type = 5
+
+[node name="Solid" parent="." unique_id=1900529135 instance=ExtResource("2_c0vf4")]
+position = Vector2(2524.9998, -3466)
+scale = Vector2(28.60673, 4.494552)
+
+[node name="Solid5" parent="." unique_id=602894782 instance=ExtResource("2_c0vf4")]
+position = Vector2(2517, -2972)
+scale = Vector2(28.60673, 4.494552)
+
+[node name="Solid6" parent="." unique_id=1770077076 instance=ExtResource("2_c0vf4")]
+position = Vector2(2689, -3016)
+scale = Vector2(28.60673, 4.494552)

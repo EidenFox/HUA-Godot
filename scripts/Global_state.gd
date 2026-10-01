@@ -6,7 +6,7 @@ var COLOR_BLUE = Color.html("#0000FF")
 var COLOR_YELLOW = Color.html("#FFFF00")
 var COLOR_MAGENTA = Color.html("#FF00FF")
 var COLOR_CYAN = Color.html("#00FFFF")
-var COLOR_DEFAULT = Color.html("#a7a7a7")
+var COLOR_DEFAULT = Color.html("#676767")
 
 signal aura_color_changed(new_color: Color)
 
