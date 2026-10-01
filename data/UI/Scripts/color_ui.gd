@@ -23,10 +23,8 @@ func _input(event: InputEvent) -> void:
 func _handle_input(event: InputEvent, action: String, color_id: String) -> void:
 	if event.is_action_pressed(action):
 		if primary_key == "":
-			# cor primária
 			primary_key = color_id
 			_apply_color_combination()
-			_update_visuals()
 		elif primary_key != color_id:
 			secondary_key = color_id
 			_apply_color_combination()
@@ -34,13 +32,36 @@ func _handle_input(event: InputEvent, action: String, color_id: String) -> void:
 	# Quando soltar a tecla prim/sec
 	elif event.is_action_released(action):
 		if color_id == primary_key:
-			primary_key = ""
-			secondary_key = ""
-			_update_visuals()
-		elif color_id == secondary_key:
-			secondary_key = ""
-			_apply_color_combination()
+			var next_primary = ""
+			
+			if Input.is_action_pressed("color_red") and color_id != ID_RED:
+				next_primary = ID_RED
+			elif Input.is_action_pressed("color_green") and color_id != ID_GREEN:
+				next_primary = ID_GREEN
+			elif Input.is_action_pressed("color_blue") and color_id != ID_BLUE:
+				next_primary = ID_BLUE
+				
+			if next_primary != "":
+				primary_key = next_primary
+				secondary_key = ""
+				_apply_color_combination()
+				_update_visuals()
+			else:
+				primary_key = ""
+				secondary_key = ""
+				_update_visuals()
+				GlobalState.current_aura_color = GlobalState.COLOR_DEFAULT
 
+func _on_visual_timer_timeout() -> void:
+	if primary_key != "":
+		_update_visuals()
+		
+func _on_secondary_timer_timeout() -> void:
+	if primary_key != "":
+		secondary_key = ""
+		_apply_color_combination()
+		
+		
 # cores dos botões (misturas)
 func _update_visuals() -> void:
 	if primary_key == "":

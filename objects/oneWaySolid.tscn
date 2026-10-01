@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://beun6g684w2mu"]
+
+[ext_resource type="Script" uid="uid://bpnjm0qxq4oi7" path="res://objects/scripts/one_way_solid.gd" id="1_p6yni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yylro"]
+
+[node name="OneWayPlatform" type="StaticBody2D" unique_id=437015030]
+z_index = 10
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_p6yni")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=440759332]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_yylro")
+one_way_collision = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1867558262]
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0, 0, 0, 1)

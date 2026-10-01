@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://5hawbmd6qvox" path="res://objects/notSolid.tscn" id="4_etcyr"]
 [ext_resource type="PackedScene" uid="uid://chm5n0yx6o4al" path="res://objects/noDoubleJump.tscn" id="5_c0vf4"]
 [ext_resource type="PackedScene" uid="uid://cbg2c58c8unfj" path="res://objects/barrier.tscn" id="5_e2a74"]
+[ext_resource type="PackedScene" uid="uid://beun6g684w2mu" path="res://objects/oneWaySolid.tscn" id="6_e2a74"]
 
 [node name="Cena" type="Node2D" unique_id=261466747]
 
@@ -40,14 +41,13 @@ position = Vector2(1915, -4082)
 scale = Vector2(21.057959, 61.863857)
 barrier_type = 5
 
-[node name="Solid" parent="." unique_id=1900529135 instance=ExtResource("2_c0vf4")]
-position = Vector2(2524.9998, -3466)
-scale = Vector2(28.60673, 4.494552)
-
 [node name="Solid5" parent="." unique_id=602894782 instance=ExtResource("2_c0vf4")]
 position = Vector2(2517, -2972)
 scale = Vector2(28.60673, 4.494552)
 
-[node name="Solid6" parent="." unique_id=1770077076 instance=ExtResource("2_c0vf4")]
-position = Vector2(2689, -3016)
-scale = Vector2(28.60673, 4.494552)
+[node name="OneWayPlatform" parent="." unique_id=806127782 instance=ExtResource("6_e2a74")]
+position = Vector2(2560, -3354)
+scale = Vector2(24.383017, 2.5629284)
+
+[node name="OneWayPlatform2" parent="." unique_id=808317252 instance=ExtResource("6_e2a74")]
+position = Vector2(2513, -3189)

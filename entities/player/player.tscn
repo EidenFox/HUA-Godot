@@ -137,6 +137,8 @@ radius = 70.028564
 
 [node name="Player" type="CharacterBody2D" unique_id=1046408071]
 z_index = 2
+collision_layer = 5
+collision_mask = 5
 script = ExtResource("1_bls4j")
 
 [node name="aura_area" type="Area2D" parent="." unique_id=1981633546]

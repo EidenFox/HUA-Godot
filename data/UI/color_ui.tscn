@@ -126,3 +126,9 @@ offset_bottom = -342.45114
 scale = Vector2(10.126494, 9.444712)
 theme = SubResource("Theme_3lksd")
 theme_override_styles/panel = SubResource("StyleBoxFlat_4h28i")
+
+[node name="Timer" type="Timer" parent="." unique_id=13989541]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_secondary_timer_timeout"]
