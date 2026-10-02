@@ -1,17 +1,22 @@
 extends CharacterBody2D
 
+#Valores Padrão
 const SPEED = 500.0
 const JUMP_VELOCITY = -700.0
+var djump = 1
+var baseDJump = 1
 
+#player
 @onready var pivot: Node2D = $Pivot
 @onready var player_sprite: AnimatedSprite2D = $Pivot/Raposo
+#Colisores/sensores
 @onready var player_collision: CollisionPolygon2D = $BodyCollision
 @onready var feet_collision: CollisionShape2D = $FeetCollision
+@onready var platform_detector: Area2D = $PlatformDetector
+#Aura
 @onready var aura_area: Area2D = $aura_area
 @onready var aura_shape: CollisionShape2D = $aura_area/radius
 
-var djump = 1
-var baseDJump = 1
 
 func _ready() -> void:
 	GlobalState.aura_color_changed.connect(_on_aura_color_changed)
@@ -72,16 +77,26 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		djump = baseDJump
 		
+	# Pulo
 	if Input.is_action_just_pressed("jump") and is_on_floor(): 
-		if Input.is_action_pressed("ui_down"):
+		#Plataforma que desce
+		if Input.is_action_pressed("down"):
 			set_collision_mask_value(3, false)
-			await get_tree().create_timer(0.3).timeout
-			set_collision_mask_value(3, true)
 		else:
 			velocity.y = JUMP_VELOCITY
 			player_sprite.play("Jump")
 	
-	# Pulo
+	#para atravessar uma plataforma que desce
+	if not get_collision_mask_value(3):
+		var still_in_platform = false
+		for body in platform_detector.get_overlapping_bodies():
+			if body != self: #tinha dado ruim pq o detector tava sempre em cima de algo... do personagem
+				still_in_platform = true
+				break
+		if still_in_platform == false:
+			set_collision_mask_value(3, true)
+	
+	# Pulo Duplo
 	if Input.is_action_just_pressed("jump") and djump >= 1 and not is_on_floor():
 		djump -= 1
 		velocity.y = JUMP_VELOCITY - 50
