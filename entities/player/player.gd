@@ -116,14 +116,20 @@ func _physics_process(delta: float) -> void:
 		if direction < 0:
 			pivot.scale.x = -1
 			player_collision.scale.x = -1
-			feet_collision.position.x = 50
-			aura_shape.position.x = 40
+			player_collision.position.x = -37
+			platform_detector.scale.x = -1
+			platform_detector.position.x = -45
+			feet_collision.position.x = 12
+			aura_shape.position.x = 43
 			queue_redraw()
 		else:
 			pivot.scale.x = 1
 			player_collision.scale.x = 1
-			feet_collision.position.x = -50
-			aura_shape.position.x = -40
+			player_collision.position.x = 37
+			platform_detector.scale.x = 1
+			platform_detector.position.x = 45
+			feet_collision.position.x = -12
+			aura_shape.position.x = -43
 			queue_redraw()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)

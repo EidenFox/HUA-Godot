@@ -25,9 +25,11 @@ func _handle_input(event: InputEvent, action: String, color_id: String) -> void:
 		if primary_key == "":
 			primary_key = color_id
 			_apply_color_combination()
+			_update_visuals()
 		elif primary_key != color_id:
 			secondary_key = color_id
 			_apply_color_combination()
+			_update_visuals()
 			
 	# Quando soltar a tecla prim/sec
 	elif event.is_action_released(action):
@@ -52,14 +54,15 @@ func _handle_input(event: InputEvent, action: String, color_id: String) -> void:
 				_update_visuals()
 				GlobalState.current_aura_color = GlobalState.COLOR_DEFAULT
 
-func _on_visual_timer_timeout() -> void:
-	if primary_key != "":
-		_update_visuals()
+#func _on_visual_timer_timeout() -> void:
+	#if primary_key != "":
+		#_update_visuals()
+		#
+#func _on_secondary_timer_timeout() -> void:
+	#if primary_key != "":
+		#secondary_key = ""
+		#_apply_color_combination()
 		
-func _on_secondary_timer_timeout() -> void:
-	if primary_key != "":
-		secondary_key = ""
-		_apply_color_combination()
 		
 		
 # cores dos botões (misturas)

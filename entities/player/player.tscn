@@ -156,7 +156,7 @@ shape = SubResource("CircleShape2D_oyuhy")
 
 [node name="Raposo" type="AnimatedSprite2D" parent="Pivot" unique_id=336914517]
 texture_filter = 1
-position = Vector2(-37, -119)
+position = Vector2(0, -97.667)
 scale = Vector2(3.4386487, 3.4386487)
 sprite_frames = SubResource("SpriteFrames_55h2j")
 animation = &"Idle"
@@ -187,13 +187,15 @@ grow_vertical = 2
 scale = Vector2(0.59415936, 0.59415936)
 
 [node name="BodyCollision" type="CollisionPolygon2D" parent="." unique_id=1321747876]
-polygon = PackedVector2Array(-99, 101, -44, 101, 17, 40, 22, -104, -25, -167, -78, -147, -98, -88, -83, -9)
+position = Vector2(37, 21)
+polygon = PackedVector2Array(-95, 3, -99, 101, -50, 101, 2, 77, 21, -106, -17, -163, -88, -145)
 
 [node name="FeetCollision" type="CollisionShape2D" parent="." unique_id=1060810027]
-position = Vector2(-50, 31)
+position = Vector2(-12, 53)
 shape = SubResource("CircleShape2D_wuv6x")
 
 [node name="PlatformDetector" type="Area2D" parent="." unique_id=42752269]
+position = Vector2(45, 24)
 collision_layer = 0
 collision_mask = 4
 

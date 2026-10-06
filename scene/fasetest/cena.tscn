@@ -51,3 +51,7 @@ scale = Vector2(24.383017, 2.5629284)
 
 [node name="OneWayPlatform2" parent="." unique_id=808317252 instance=ExtResource("6_e2a74")]
 position = Vector2(2513, -3189)
+
+[node name="Solid" parent="." unique_id=2021053478 instance=ExtResource("2_c0vf4")]
+position = Vector2(2825, -3773)
+scale = Vector2(19.681534, 4.6257734)
