@@ -191,7 +191,7 @@ position = Vector2(37, 21)
 polygon = PackedVector2Array(-95, 3, -99, 101, -50, 101, 2, 77, 21, -106, -17, -163, -88, -145)
 
 [node name="FeetCollision" type="CollisionShape2D" parent="." unique_id=1060810027]
-position = Vector2(-12, 53)
+position = Vector2(-12, 52)
 shape = SubResource("CircleShape2D_wuv6x")
 
 [node name="PlatformDetector" type="Area2D" parent="." unique_id=42752269]
