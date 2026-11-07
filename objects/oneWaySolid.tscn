@@ -18,4 +18,4 @@ one_way_collision = true
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1867558262]
 offset_right = 20.0
 offset_bottom = 20.0
-color = Color(0, 0, 0, 1)
+color = Color(0.20511743, 0.20511743, 0.20511743, 1)

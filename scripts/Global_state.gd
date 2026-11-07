@@ -14,3 +14,5 @@ var current_aura_color: Color = COLOR_DEFAULT:
 	set(value):
 		current_aura_color = value
 		aura_color_changed.emit(value)
+
+var keep_color = false;
