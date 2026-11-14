@@ -1,0 +1,255 @@
+[gd_scene format=3 uid="uid://dfiankouid3wp"]
+
+[ext_resource type="PackedScene" uid="uid://chm5n0yx6o4al" path="res://objects/noDoubleJump.tscn" id="1_hprnv"]
+[ext_resource type="PackedScene" uid="uid://cbg2c58c8unfj" path="res://objects/barrier.tscn" id="2_qponk"]
+[ext_resource type="PackedScene" uid="uid://bn7cpvww5kuge" path="res://entities/player/player.tscn" id="3_2vpo4"]
+[ext_resource type="PackedScene" uid="uid://cj0s4o88whqtc" path="res://objects/solid.tscn" id="4_31tao"]
+[ext_resource type="PackedScene" uid="uid://beun6g684w2mu" path="res://objects/oneWaySolid.tscn" id="5_qponk"]
+
+[node name="Phase1" type="Node2D" unique_id=1036716441]
+position = Vector2(-16, -11470)
+
+[node name="NoDoubleJump" parent="." unique_id=1890158861 instance=ExtResource("1_hprnv")]
+position = Vector2(-62, -1991)
+scale = Vector2(711.37463, 220.05254)
+
+[node name="Barriers" type="Node2D" parent="." unique_id=254410370]
+position = Vector2(821, -9)
+
+[node name="Barreira" parent="Barriers" unique_id=635477123 instance=ExtResource("2_qponk")]
+position = Vector2(2269, 617)
+scale = Vector2(43.68754, -101.07053)
+barrier_type = 0
+
+[node name="Textos" type="Node2D" parent="." unique_id=220272607]
+position = Vector2(484, -107)
+
+[node name="Label" type="Label" parent="Textos" unique_id=980388792]
+offset_left = 334.0
+offset_top = -66.999985
+offset_right = 604.0
+offset_bottom = 8.000015
+scale = Vector2(2.3533268, 2.3533268)
+text = "Olá, seja bem vindo a HUA.
+Este jogo é baseado no conceito de
+\"COR e PERSPECTIVA\""
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Textos" unique_id=503027569]
+offset_left = 1734.0
+offset_top = -81.0
+offset_right = 1769.1196
+offset_bottom = -56.497925
+scale = Vector2(1.2243863, 1.2243863)
+theme_override_colors/font_color = Color(0.36659443, 0.36659467, 0.36659455, 1)
+text = "67"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Textos" unique_id=1367299074]
+offset_left = 1495.9999
+offset_top = -66.999985
+offset_right = 1765.9999
+offset_bottom = 8.000015
+scale = Vector2(2.3533268, 2.3533268)
+text = "Existe uma Aura ao redor do personagem
+esta Aura é a sua habilidade
+\"Manipular Cores\"."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label6" type="Label" parent="Textos" unique_id=1279755824]
+offset_left = 9710.0
+offset_top = -1049.9999
+offset_right = 10031.0
+offset_bottom = -974.9999
+scale = Vector2(2.3533268, 2.3533268)
+text = "Você ainda não tem a cor necessária
+para acessar esta área. Use
+↓ + pulo
+para descer"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Textos" unique_id=1656082805]
+offset_left = 1603.0
+offset_top = 510.0
+offset_right = 1831.6125
+offset_bottom = 570.765
+scale = Vector2(2.3533268, 2.3533268)
+text = "Aperte \"Q\" para
+ abrir seu seletor decores"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="Textos" unique_id=44307754]
+offset_left = 2608.0
+offset_top = -101.0
+offset_right = 2929.0
+offset_bottom = -26.0
+scale = Vector2(2.3533268, 2.3533268)
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Tente igualar a cor da sua aura
+com a cor da parere."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." unique_id=1046408071 instance=ExtResource("3_2vpo4")]
+position = Vector2(8611, 647)
+
+[node name="Map" type="Node2D" parent="." unique_id=1629887857]
+position = Vector2(67, -131)
+
+[node name="Solidos" type="Node" parent="Map" unique_id=1859261219]
+
+[node name="Solid2" parent="Map/Solidos" unique_id=435454029 instance=ExtResource("4_31tao")]
+position = Vector2(-78, -10659)
+scale = Vector2(9.745299, -136.7857)
+
+[node name="Solid" parent="Map/Solidos" unique_id=1430129423 instance=ExtResource("4_31tao")]
+position = Vector2(-31.999992, -11077)
+scale = Vector2(241.20912, 233.49292)
+
+[node name="Solid4" parent="Map/Solidos" unique_id=437015030 instance=ExtResource("4_31tao")]
+position = Vector2(5442, -11077)
+scale = Vector2(57.2688, 232.94412)
+
+[node name="Solid5" parent="Map/Solidos" unique_id=807955229 instance=ExtResource("4_31tao")]
+position = Vector2(-78, -13395)
+scale = Vector2(572.5029, 29.423834)
+
+[node name="Solid6" parent="Map/Solidos" unique_id=782657139 instance=ExtResource("4_31tao")]
+position = Vector2(-16, -4994)
+scale = Vector2(572.5029, 29.423834)
+
+[node name="Solid7" parent="Map/Solidos" unique_id=416618679 instance=ExtResource("4_31tao")]
+position = Vector2(6587, -10862)
+scale = Vector2(57.2688, 232.94412)
+
+[node name="Solid8" parent="Map/Solidos" unique_id=251691178 instance=ExtResource("4_31tao")]
+position = Vector2(7732.0005, -10659)
+scale = Vector2(57.2688, 232.94412)
+
+[node name="Solid9" parent="Map/Solidos" unique_id=1412918828 instance=ExtResource("4_31tao")]
+position = Vector2(8877, -9559)
+scale = Vector2(165.03513, 265.91098)
+
+[node name="Solid10" parent="Map/Solidos" unique_id=1018495531 instance=ExtResource("4_31tao")]
+position = Vector2(11973, -11040)
+scale = Vector2(108.99988, 191.54991)
+
+[node name="Solid3" parent="Map/Solidos" unique_id=284786520 instance=ExtResource("4_31tao")]
+position = Vector2(11178, -12807)
+scale = Vector2(9.659403, 31.93584)
+
+[node name="Solid11" parent="Map/Solidos" unique_id=275323648 instance=ExtResource("4_31tao")]
+position = Vector2(11371.001, -12375)
+scale = Vector2(-67.27296, 12.093015)
+
+[node name="Barreira" parent="Map/Solidos" unique_id=2124183680 instance=ExtResource("2_qponk")]
+position = Vector2(10026.001, -12308.001)
+scale = Vector2(4.832256, -31.90962)
+
+[node name="OneWayPlatform3" parent="Map/Solidos" unique_id=1345109673 instance=ExtResource("5_qponk")]
+position = Vector2(6986, -11302.001)
+scale = Vector2(15.76214, 2.328747)
+solid_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="OneWayPlatform5" parent="Map/Solidos" unique_id=762000163 instance=ExtResource("5_qponk")]
+position = Vector2(7427, -11479.001)
+scale = Vector2(15.76214, 2.328747)
+solid_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="OneWayPlatform6" parent="Map/Solidos" unique_id=644048998 instance=ExtResource("5_qponk")]
+position = Vector2(7863, -11658)
+scale = Vector2(15.76214, 2.328747)
+solid_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="OneWayPlatform7" parent="Map/Solidos" unique_id=554555227 instance=ExtResource("5_qponk")]
+position = Vector2(8233, -11807.001)
+scale = Vector2(15.76214, 2.328747)
+solid_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="OneWayPlatform8" parent="Map/Solidos" unique_id=1435994460 instance=ExtResource("5_qponk")]
+position = Vector2(8877, -11949.001)
+scale = Vector2(15.76214, 2.328747)
+solid_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="OneWayPlatform9" parent="Map/Solidos" unique_id=1838055810 instance=ExtResource("5_qponk")]
+position = Vector2(9280, -12098)
+scale = Vector2(15.76214, 2.328747)
+solid_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="OneWayPlatform10" parent="Map/Solidos" unique_id=1240278402 instance=ExtResource("5_qponk")]
+position = Vector2(9716.001, -12180)
+scale = Vector2(15.76214, 2.328747)
+solid_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="OneWayPlatform4" parent="Map/Solidos" unique_id=218570360 instance=ExtResource("5_qponk")]
+position = Vector2(10027.999, -12374.998)
+scale = Vector2(-213.52849, 2.438714)
+solid_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="Solid12" parent="Map/Solidos" unique_id=217362344 instance=ExtResource("4_31tao")]
+position = Vector2(8815, -10125)
+scale = Vector2(9.100944, 33.3726)
+
+[node name="Solid13" parent="Map/Solidos" unique_id=105383821 instance=ExtResource("4_31tao")]
+position = Vector2(8906, -9985.999)
+scale = Vector2(9.100944, 33.3726)
+
+[node name="Solid14" parent="Map/Solidos" unique_id=165635407 instance=ExtResource("4_31tao")]
+position = Vector2(8997.001, -9863)
+scale = Vector2(9.100944, 33.3726)
+
+[node name="Solid15" parent="Map/Solidos" unique_id=81468838 instance=ExtResource("4_31tao")]
+position = Vector2(9088, -9732)
+scale = Vector2(9.100944, 33.3726)
+
+[node name="Barreiras" type="Node" parent="Map" unique_id=827758766]
+
+[node name="Barreira" parent="Map/Barreiras" unique_id=627940662 instance=ExtResource("2_qponk")]
+position = Vector2(4792, -11077)
+scale = Vector2(32.52096, 6.8507247)
+
+[node name="Barreira2" parent="Map/Barreiras" unique_id=1277183087 instance=ExtResource("2_qponk")]
+position = Vector2(5442.0005, -11077)
+scale = Vector2(6.318675, -102.08523)
+
+[node name="Barreira5" parent="Map/Barreiras" unique_id=798579656 instance=ExtResource("2_qponk")]
+position = Vector2(8769, -11040)
+scale = Vector2(-1.4332713, 90.95976)
+
+[node name="Barreira6" parent="Map/Barreiras" unique_id=1914048560 instance=ExtResource("2_qponk")]
+position = Vector2(10031, -10354)
+scale = Vector2(-1.5830147, 40.514275)
+
+[node name="Barreira9" parent="Map/Barreiras" unique_id=506201007 instance=ExtResource("2_qponk")]
+position = Vector2(10527, -10435.999)
+scale = Vector2(-1.5830147, 44.554268)
+
+[node name="Barreira10" parent="Map/Barreiras" unique_id=13855263 instance=ExtResource("2_qponk")]
+position = Vector2(11178, -10452)
+scale = Vector2(-1.5830147, 44.91427)
+
+[node name="Barreira12" parent="Map/Barreiras" unique_id=1777232839 instance=ExtResource("2_qponk")]
+position = Vector2(10875, -11040)
+scale = Vector2(-1.4825519, 8.381066)
+
+[node name="Barreira11" parent="Map/Barreiras" unique_id=1718334013 instance=ExtResource("2_qponk")]
+position = Vector2(11583, -10609)
+scale = Vector2(-1.5830147, 52.794266)
+
+[node name="Barreira7" parent="Map/Barreiras" unique_id=1206408494 instance=ExtResource("2_qponk")]
+position = Vector2(9498, -10263)
+scale = Vector2(-1.5830147, 35.27427)
+
+[node name="Barreira8" parent="Map/Barreiras" unique_id=182538463 instance=ExtResource("2_qponk")]
+position = Vector2(11893.001, -10788.999)
+scale = Vector2(-1.5830147, 61.554276)
+
+[node name="OneWayPlatform" parent="Map/Barreiras" unique_id=1095811582 instance=ExtResource("5_qponk")]
+position = Vector2(11973, -11040)
+scale = Vector2(-161.75896, 1.4545159)
+solid_color = Color(0.17641911, 0.17641908, 0.17641908, 1)

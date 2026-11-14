@@ -16,6 +16,9 @@ var baseDJump = 1
 #Aura
 @onready var aura_area: Area2D = $aura_area
 @onready var aura_shape: CollisionShape2D = $aura_area/radius
+#coyoteTime
+@export var coyoteDuration: float=0.1
+var coyoteTimer: float=0.0
 
 
 func _ready() -> void:
@@ -78,7 +81,7 @@ func _physics_process(delta: float) -> void:
 		djump = baseDJump
 		
 	# Pulo
-	if Input.is_action_just_pressed("jump") and is_on_floor(): 
+	if Input.is_action_just_pressed("jump") and (is_on_floor() or coyoteTimer > 0.0):
 		#Plataforma que desce
 		if Input.is_action_pressed("down"):
 			set_collision_mask_value(3, false)
@@ -95,6 +98,12 @@ func _physics_process(delta: float) -> void:
 				break
 		if still_in_platform == false:
 			set_collision_mask_value(3, true)
+			
+	#Coyote Time (100ms para o jogador poder pular depois de sair da plataforma)
+	if is_on_floor():
+		coyoteTimer = coyoteDuration
+	else:
+		coyoteTimer = max(coyoteTimer - delta, 0.0)
 	
 	# Pulo Duplo
 	if Input.is_action_just_pressed("jump") and djump >= 1 and not is_on_floor():
