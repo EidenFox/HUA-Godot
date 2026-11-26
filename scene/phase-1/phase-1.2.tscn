@@ -5,21 +5,26 @@
 [ext_resource type="PackedScene" uid="uid://bn7cpvww5kuge" path="res://entities/player/player.tscn" id="3_2vpo4"]
 [ext_resource type="PackedScene" uid="uid://cj0s4o88whqtc" path="res://objects/solid.tscn" id="4_31tao"]
 [ext_resource type="PackedScene" uid="uid://beun6g684w2mu" path="res://objects/oneWaySolid.tscn" id="5_qponk"]
+[ext_resource type="PackedScene" uid="uid://5hawbmd6qvox" path="res://objects/notSolid.tscn" id="6_2vpo4"]
 
 [node name="Phase1" type="Node2D" unique_id=1036716441]
 position = Vector2(-16, -11470)
 
 [node name="NoDoubleJump" parent="." unique_id=1890158861 instance=ExtResource("1_hprnv")]
-position = Vector2(-62, -1991)
-scale = Vector2(708.5875, 165.37706)
+position = Vector2(-13.999998, -1964)
+scale = Vector2(730.1669, 457.8445)
 
-[node name="Barriers" type="Node2D" parent="." unique_id=254410370]
-position = Vector2(821, -9)
+[node name="NoDoubleJump2" parent="." unique_id=713830770 instance=ExtResource("1_hprnv")]
+position = Vector2(14660.999, 688.0005)
+scale = Vector2(456.011, 192.3203)
 
-[node name="Barreira" parent="Barriers" unique_id=635477123 instance=ExtResource("2_qponk")]
-position = Vector2(2269, 617)
-scale = Vector2(43.68754, -101.07053)
-barrier_type = 0
+[node name="NoDoubleJump3" parent="." unique_id=1073204428 instance=ExtResource("1_hprnv")]
+position = Vector2(17982.998, -2453)
+scale = Vector2(250.78122, 156.19633)
+
+[node name="NoDoubleJump4" parent="." unique_id=1236699405 instance=ExtResource("1_hprnv")]
+position = Vector2(14590, -2673)
+scale = Vector2(169.7458, 182.13684)
 
 [node name="Textos" type="Node2D" parent="." unique_id=220272607]
 position = Vector2(484, -107)
@@ -96,12 +101,77 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=1046408071 instance=ExtResource("3_2vpo4")]
-position = Vector2(8611, 647)
+position = Vector2(1741, 151)
 
 [node name="Map" type="Node2D" parent="." unique_id=1629887857]
 position = Vector2(67, -131)
 
 [node name="Solidos" type="Node" parent="Map" unique_id=1859261219]
+
+[node name="Solid20" parent="Map/Solidos" unique_id=1339696551 instance=ExtResource("4_31tao")]
+position = Vector2(14552, -11127)
+scale = Vector2(6.0277367, 167.5802)
+
+[node name="Solid21" parent="Map/Solidos" unique_id=1082411658 instance=ExtResource("4_31tao")]
+position = Vector2(15496.999, -7411)
+scale = Vector2(370.3498, 54.63664)
+
+[node name="Solid22" parent="Map/Solidos" unique_id=164397700 instance=ExtResource("4_31tao")]
+position = Vector2(15828, -7572)
+scale = Vector2(90.74664, 83.710175)
+
+[node name="Solid23" parent="Map/Solidos" unique_id=260672254 instance=ExtResource("4_31tao")]
+position = Vector2(16123, -7769)
+scale = Vector2(75.10923, 89.15694)
+
+[node name="Solid24" parent="Map/Solidos" unique_id=294326462 instance=ExtResource("4_31tao")]
+position = Vector2(16463, -7966)
+scale = Vector2(58.8006, 83.120895)
+
+[node name="Solid25" parent="Map/Solidos" unique_id=68771474 instance=ExtResource("4_31tao")]
+position = Vector2(16746.002, -8157)
+scale = Vector2(45.471786, 47.925613)
+
+[node name="Solid26" parent="Map/Solidos" unique_id=1512073304 instance=ExtResource("4_31tao")]
+position = Vector2(17557, -8009)
+scale = Vector2(12.524441, 40.969692)
+
+[node name="Solid27" parent="Map/Solidos" unique_id=1766804725 instance=ExtResource("4_31tao")]
+position = Vector2(17720.002, -7845.9995)
+scale = Vector2(12.524441, 40.969692)
+
+[node name="Solid28" parent="Map/Solidos" unique_id=1773758115 instance=ExtResource("4_31tao")]
+position = Vector2(17908, -7670.9995)
+scale = Vector2(12.524441, 40.969692)
+
+[node name="Solid29" parent="Map/Solidos" unique_id=881112678 instance=ExtResource("4_31tao")]
+position = Vector2(18100, -7506.9995)
+scale = Vector2(12.524441, 40.969692)
+
+[node name="Solid30" parent="Map/Solidos" unique_id=269109881 instance=ExtResource("4_31tao")]
+position = Vector2(20839, -7882)
+scale = Vector2(75.290276, -64.50259)
+
+[node name="Solid31" parent="Map/Solidos" unique_id=1775801695 instance=ExtResource("4_31tao")]
+position = Vector2(22251, -10202)
+rotation = -3.1415927
+scale = Vector2(379.1606, -9.173476)
+
+[node name="Solid32" parent="Map/Solidos" unique_id=556973346 instance=ExtResource("4_31tao")]
+position = Vector2(18305, -10091)
+scale = Vector2(9.189819, 47.966316)
+
+[node name="Solid33" parent="Map/Solidos" unique_id=1959508864 instance=ExtResource("4_31tao")]
+position = Vector2(18850, -10171)
+scale = Vector2(7.997161, 44.62638)
+
+[node name="Solid34" parent="Map/Solidos" unique_id=886944201 instance=ExtResource("4_31tao")]
+position = Vector2(19374, -10189)
+scale = Vector2(7.997161, 40.516193)
+
+[node name="Solid35" parent="Map/Solidos" unique_id=1632984025 instance=ExtResource("4_31tao")]
+position = Vector2(19879.002, -10161)
+scale = Vector2(8.415612, 32.67184)
 
 [node name="Solid2" parent="Map/Solidos" unique_id=435454029 instance=ExtResource("4_31tao")]
 position = Vector2(-78, -10659)
@@ -116,8 +186,8 @@ position = Vector2(5442, -11077)
 scale = Vector2(57.2688, 232.94412)
 
 [node name="Solid5" parent="Map/Solidos" unique_id=807955229 instance=ExtResource("4_31tao")]
-position = Vector2(-78, -13395)
-scale = Vector2(572.5029, 29.423834)
+position = Vector2(-52, -14155)
+scale = Vector2(570.84503, 68.521385)
 
 [node name="Solid6" parent="Map/Solidos" unique_id=782657139 instance=ExtResource("4_31tao")]
 position = Vector2(-16, -4994)
@@ -146,10 +216,6 @@ scale = Vector2(9.659403, 31.93584)
 [node name="Solid11" parent="Map/Solidos" unique_id=275323648 instance=ExtResource("4_31tao")]
 position = Vector2(11371.001, -12375)
 scale = Vector2(-67.27296, 12.093015)
-
-[node name="Barreira" parent="Map/Solidos" unique_id=2124183680 instance=ExtResource("2_qponk")]
-position = Vector2(10026.001, -12308.001)
-scale = Vector2(4.832256, -31.90962)
 
 [node name="OneWayPlatform3" parent="Map/Solidos" unique_id=1345109673 instance=ExtResource("5_qponk")]
 position = Vector2(6986, -11302.001)
@@ -191,6 +257,12 @@ position = Vector2(10027.999, -12374.998)
 scale = Vector2(-213.52849, 2.438714)
 solid_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
 
+[node name="OneWayPlatform" parent="Map/Solidos" unique_id=1095811582 instance=ExtResource("5_qponk")]
+position = Vector2(11973, -11043)
+rotation = -3.1415927
+scale = Vector2(33.782192, -3.442005)
+solid_color = Color(0.17641911, 0.17641908, 0.17641908, 1)
+
 [node name="Solid12" parent="Map/Solidos" unique_id=217362344 instance=ExtResource("4_31tao")]
 position = Vector2(8815, -10125)
 scale = Vector2(9.100944, 33.3726)
@@ -207,49 +279,345 @@ scale = Vector2(9.100944, 33.3726)
 position = Vector2(9088, -9732)
 scale = Vector2(9.100944, 33.3726)
 
+[node name="Solid16" parent="Map/Solidos" unique_id=2063174991 instance=ExtResource("4_31tao")]
+position = Vector2(11844, -7244.9995)
+scale = Vector2(553.61694, 147.69402)
+
+[node name="Solid17" parent="Map/Solidos" unique_id=1276758677 instance=ExtResource("4_31tao")]
+position = Vector2(22860.002, -4317)
+scale = Vector2(157.6047, -467.59055)
+
+[node name="Solid18" parent="Map/Solidos" unique_id=187129500 instance=ExtResource("4_31tao")]
+position = Vector2(14552, -11184)
+scale = Vector2(171.13824, 48.92576)
+
+[node name="Solid19" parent="Map/Solidos" unique_id=253820779 instance=ExtResource("4_31tao")]
+position = Vector2(14550.001, -11592)
+scale = Vector2(171.40903, 3.341099)
+
+[node name="Solid36" parent="Map/Solidos" unique_id=1601895063 instance=ExtResource("4_31tao")]
+position = Vector2(14548, -13669.001)
+scale = Vector2(171.33656, 103.75931)
+
+[node name="Solid37" parent="Map/Solidos" unique_id=825196407 instance=ExtResource("4_31tao")]
+position = Vector2(22225, -10054)
+scale = Vector2(9.638849, 6.3959107)
+
+[node name="Solid38" parent="Map/Solidos" unique_id=487963704 instance=ExtResource("4_31tao")]
+position = Vector2(21454, -11750)
+scale = Vector2(6.528014, 60.20177)
+
+[node name="Solid39" parent="Map/Solidos" unique_id=47848597 instance=ExtResource("4_31tao")]
+position = Vector2(21472, -10551)
+rotation = -3.1415927
+scale = Vector2(17.736607, 72.4042)
+
+[node name="Solid40" parent="Map/Solidos" unique_id=602974648 instance=ExtResource("4_31tao")]
+position = Vector2(21163, -10551)
+rotation = -3.1415927
+scale = Vector2(17.736607, 84.748985)
+
+[node name="Solid41" parent="Map/Solidos" unique_id=137314010 instance=ExtResource("4_31tao")]
+position = Vector2(20829, -10559)
+rotation = -3.1415927
+scale = Vector2(19.512457, 96.22822)
+
+[node name="Solid42" parent="Map/Solidos" unique_id=813491898 instance=ExtResource("4_31tao")]
+position = Vector2(20443.002, -10559)
+rotation = -3.1415927
+scale = Vector2(24.275257, 108.38984)
+
+[node name="Solid43" parent="Map/Solidos" unique_id=227563383 instance=ExtResource("4_31tao")]
+position = Vector2(18920, -11268)
+
+[node name="Solid44" parent="Map/Solidos" unique_id=978228311 instance=ExtResource("4_31tao")]
+position = Vector2(8747, -13632)
+scale = Vector2(863.12976, -26.563372)
+
+[node name="Solid45" parent="Map/Solidos" unique_id=2110177153 instance=ExtResource("4_31tao")]
+position = Vector2(8726.001, -10975.001)
+scale = Vector2(132.60327, -6.828577)
+
+[node name="Barreira" parent="Map/Solidos" unique_id=901455585 instance=ExtResource("2_qponk")]
+position = Vector2(11313, -11579.001)
+scale = Vector2(2.553615, 24.068262)
+
 [node name="Barreiras" type="Node" parent="Map" unique_id=827758766]
+
+[node name="Barreira37" parent="Map/Barreiras" unique_id=635477123 instance=ExtResource("2_qponk")]
+position = Vector2(3074, -10862)
+scale = Vector2(43.68754, -101.07053)
+barrier_type = 0
 
 [node name="Barreira" parent="Map/Barreiras" unique_id=627940662 instance=ExtResource("2_qponk")]
 position = Vector2(4792, -11077)
 scale = Vector2(32.52096, 6.8507247)
+barrier_type = 2
 
 [node name="Barreira2" parent="Map/Barreiras" unique_id=1277183087 instance=ExtResource("2_qponk")]
 position = Vector2(5442.0005, -11077)
 scale = Vector2(6.318675, -102.08523)
+barrier_type = 2
 
 [node name="Barreira5" parent="Map/Barreiras" unique_id=798579656 instance=ExtResource("2_qponk")]
 position = Vector2(8769, -11040)
 scale = Vector2(-1.4332713, 90.95976)
+barrier_type = 0
 
 [node name="Barreira6" parent="Map/Barreiras" unique_id=1914048560 instance=ExtResource("2_qponk")]
 position = Vector2(10031, -10354)
 scale = Vector2(-1.5830147, 40.514275)
+barrier_type = 0
 
 [node name="Barreira9" parent="Map/Barreiras" unique_id=506201007 instance=ExtResource("2_qponk")]
 position = Vector2(10527, -10435.999)
 scale = Vector2(-1.5830147, 44.554268)
+barrier_type = 0
 
 [node name="Barreira10" parent="Map/Barreiras" unique_id=13855263 instance=ExtResource("2_qponk")]
 position = Vector2(11178, -10452)
 scale = Vector2(-1.5830147, 44.91427)
+barrier_type = 0
 
 [node name="Barreira12" parent="Map/Barreiras" unique_id=1777232839 instance=ExtResource("2_qponk")]
 position = Vector2(10875, -11040)
 scale = Vector2(-1.4825519, 8.381066)
+barrier_type = 0
 
 [node name="Barreira11" parent="Map/Barreiras" unique_id=1718334013 instance=ExtResource("2_qponk")]
 position = Vector2(11583, -10609)
 scale = Vector2(-1.5830147, 52.794266)
+barrier_type = 0
 
 [node name="Barreira7" parent="Map/Barreiras" unique_id=1206408494 instance=ExtResource("2_qponk")]
 position = Vector2(9498, -10263)
 scale = Vector2(-1.5830147, 35.27427)
+barrier_type = 0
 
 [node name="Barreira8" parent="Map/Barreiras" unique_id=182538463 instance=ExtResource("2_qponk")]
 position = Vector2(11893.001, -10788.999)
 scale = Vector2(-1.5830147, 61.554276)
+barrier_type = 0
 
-[node name="OneWayPlatform" parent="Map/Barreiras" unique_id=1095811582 instance=ExtResource("5_qponk")]
-position = Vector2(11973, -11040)
-scale = Vector2(-161.75896, 1.4545159)
-solid_color = Color(0.17641911, 0.17641908, 0.17641908, 1)
+[node name="Barreira3" parent="Map/Barreiras" unique_id=2124183680 instance=ExtResource("2_qponk")]
+position = Vector2(10026.001, -12308.001)
+scale = Vector2(4.832256, -31.90962)
+
+[node name="Barreira4" parent="Map/Barreiras" unique_id=1377184217 instance=ExtResource("2_qponk")]
+position = Vector2(14552, -11151)
+scale = Vector2(3.9630268, -21.631374)
+
+[node name="Barreira13" parent="Map/Barreiras" unique_id=1437647612 instance=ExtResource("2_qponk")]
+position = Vector2(14579.001, -7836)
+scale = Vector2(3.0107563, 32.174435)
+barrier_type = 2
+
+[node name="Barreira14" parent="Map/Barreiras" unique_id=1318831109 instance=ExtResource("2_qponk")]
+position = Vector2(17985, -8290)
+scale = Vector2(13.809603, 2.2550557)
+barrier_type = 5
+
+[node name="Barreira15" parent="Map/Barreiras" unique_id=2063113538 instance=ExtResource("2_qponk")]
+position = Vector2(18530, -8398)
+scale = Vector2(13.809603, 2.2550557)
+barrier_type = 1
+
+[node name="Barreira16" parent="Map/Barreiras" unique_id=1909871166 instance=ExtResource("2_qponk")]
+position = Vector2(19041, -8509)
+scale = Vector2(13.809603, 2.2550557)
+barrier_type = 3
+
+[node name="Barreira17" parent="Map/Barreiras" unique_id=2046947407 instance=ExtResource("2_qponk")]
+position = Vector2(19551.998, -8640)
+scale = Vector2(13.809603, 2.2550557)
+barrier_type = 2
+
+[node name="Barreira18" parent="Map/Barreiras" unique_id=1859178066 instance=ExtResource("2_qponk")]
+position = Vector2(20059, -8754)
+scale = Vector2(13.809603, 2.2550557)
+barrier_type = 0
+
+[node name="Barreira19" parent="Map/Barreiras" unique_id=1641173735 instance=ExtResource("2_qponk")]
+position = Vector2(20557, -8833)
+scale = Vector2(13.809603, 2.2550557)
+
+[node name="Barreira20" parent="Map/Barreiras" unique_id=2045110836 instance=ExtResource("2_qponk")]
+position = Vector2(20555.002, -9307)
+scale = Vector2(39.787167, -43.822857)
+
+[node name="Barreira21" parent="Map/Barreiras" unique_id=536462073 instance=ExtResource("2_qponk")]
+position = Vector2(22061.002, -9622)
+scale = Vector2(1.1468, -21.56769)
+barrier_type = 3
+
+[node name="Barreira24" parent="Map/Barreiras" unique_id=1113850661 instance=ExtResource("2_qponk")]
+position = Vector2(22421.998, -9698)
+scale = Vector2(24.590502, -1.6893854)
+
+[node name="Barreira22" parent="Map/Barreiras" unique_id=633478347 instance=ExtResource("2_qponk")]
+position = Vector2(20839, -9004)
+rotation = -3.1415927
+scale = Vector2(14.281819, -1.6996129)
+barrier_type = 2
+
+[node name="Barreira23" parent="Map/Barreiras" unique_id=673998931 instance=ExtResource("2_qponk")]
+position = Vector2(20554, -9306)
+scale = Vector2(2.0605433, 23.51364)
+barrier_type = 2
+
+[node name="Barreira25" parent="Map/Barreiras" unique_id=950151169 instance=ExtResource("2_qponk")]
+position = Vector2(18378, -9149)
+scale = Vector2(1.5921675, 40.877773)
+barrier_type = 1
+
+[node name="Barreira26" parent="Map/Barreiras" unique_id=216632764 instance=ExtResource("2_qponk")]
+position = Vector2(18913, -9274)
+scale = Vector2(1.5921675, 40.877773)
+barrier_type = 3
+
+[node name="Barreira27" parent="Map/Barreiras" unique_id=1468646931 instance=ExtResource("2_qponk")]
+position = Vector2(19431.002, -9391)
+scale = Vector2(1.5921675, 40.877773)
+barrier_type = 2
+
+[node name="Barreira28" parent="Map/Barreiras" unique_id=882765148 instance=ExtResource("2_qponk")]
+position = Vector2(19945, -9516)
+scale = Vector2(1.5921675, 40.877773)
+barrier_type = 0
+
+[node name="Barreira29" parent="Map/Barreiras" unique_id=480890548 instance=ExtResource("2_qponk")]
+position = Vector2(21348, -9162)
+scale = Vector2(49.76541, -7.9537816)
+barrier_type = 2
+
+[node name="Barreira30" parent="Map/Barreiras" unique_id=1575413351 instance=ExtResource("2_qponk")]
+position = Vector2(21591.002, -9304)
+scale = Vector2(37.625416, -8.452261)
+barrier_type = 2
+
+[node name="Barreira31" parent="Map/Barreiras" unique_id=2018799759 instance=ExtResource("2_qponk")]
+position = Vector2(21895.002, -9397)
+scale = Vector2(22.389627, -7.5555964)
+barrier_type = 2
+
+[node name="Barreira32" parent="Map/Barreiras" unique_id=1850420968 instance=ExtResource("2_qponk")]
+position = Vector2(22231.002, -9461)
+scale = Vector2(5.589812, -7.343207)
+barrier_type = 2
+
+[node name="Barreira33" parent="Map/Barreiras" unique_id=1894602184 instance=ExtResource("2_qponk")]
+position = Vector2(21886, -10017)
+scale = Vector2(1.039484, 19.677189)
+
+[node name="Barreira34" parent="Map/Barreiras" unique_id=2058970715 instance=ExtResource("2_qponk")]
+position = Vector2(22227.998, -10019)
+scale = Vector2(1.039484, 16.21938)
+
+[node name="Barreira35" parent="Map/Barreiras" unique_id=1293066323 instance=ExtResource("2_qponk")]
+position = Vector2(22668, -9968)
+scale = Vector2(9.421749, 0.97203296)
+
+[node name="Barreira36" parent="Map/Barreiras" unique_id=1132558545 instance=ExtResource("2_qponk")]
+position = Vector2(22214, -10050)
+scale = Vector2(20.803905, 1.3200805)
+
+[node name="Barreira38" parent="Map/Barreiras" unique_id=1924946112 instance=ExtResource("2_qponk")]
+position = Vector2(22487.002, -10415)
+scale = Vector2(22.778587, -1.4635197)
+
+[node name="Barreira39" parent="Map/Barreiras" unique_id=1450508173 instance=ExtResource("2_qponk")]
+position = Vector2(22466, -10656)
+scale = Vector2(22.778587, -1.4635197)
+barrier_type = 2
+
+[node name="Barreira40" parent="Map/Barreiras" unique_id=399552114 instance=ExtResource("2_qponk")]
+position = Vector2(22016, -10889)
+scale = Vector2(22.778587, -1.4635197)
+barrier_type = 2
+
+[node name="Barreira41" parent="Map/Barreiras" unique_id=1026918504 instance=ExtResource("2_qponk")]
+position = Vector2(22016, -10889)
+scale = Vector2(22.778587, 11.5229435)
+barrier_type = 2
+
+[node name="Barreira42" parent="Map/Barreiras" unique_id=286893521 instance=ExtResource("2_qponk")]
+position = Vector2(21575.002, -11144)
+scale = Vector2(22.778587, -1.4635197)
+barrier_type = 2
+
+[node name="Barreira43" parent="Map/Barreiras" unique_id=592750362 instance=ExtResource("2_qponk")]
+position = Vector2(21575.002, -11144)
+scale = Vector2(22.648407, 24.308458)
+barrier_type = 2
+
+[node name="Barreira44" parent="Map/Barreiras" unique_id=1871709335 instance=ExtResource("2_qponk")]
+position = Vector2(21991.002, -11705)
+scale = Vector2(26.006002, -2.2112815)
+barrier_type = 2
+
+[node name="Barreira45" parent="Map/Barreiras" unique_id=1851757185 instance=ExtResource("2_qponk")]
+position = Vector2(21575.002, -11462)
+scale = Vector2(22.708714, -14.403148)
+barrier_type = 2
+
+[node name="Barreira46" parent="Map/Barreiras" unique_id=202560607 instance=ExtResource("2_qponk")]
+position = Vector2(22035, -11204)
+scale = Vector2(22.50445, -11.019932)
+barrier_type = 2
+
+[node name="Barreira47" parent="Map/Barreiras" unique_id=412098615 instance=ExtResource("2_qponk")]
+position = Vector2(22476.002, -10984)
+scale = Vector2(43.67059, -34.35076)
+barrier_type = 2
+
+[node name="ColorRect" parent="." unique_id=723267599 instance=ExtResource("6_2vpo4")]
+offset_left = 20948.0
+offset_top = 3454.0
+offset_right = 20988.0
+offset_bottom = 3494.0
+scale = Vector2(9.466975, 5.7138057)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" parent="." unique_id=477158363 instance=ExtResource("6_2vpo4")]
+offset_left = 20953.0
+offset_top = 3980.0
+offset_right = 20993.0
+offset_bottom = 4020.0
+scale = Vector2(9.466975, 5.7138057)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" parent="." unique_id=2128127971 instance=ExtResource("6_2vpo4")]
+offset_left = 21074.0
+offset_top = 3545.0
+offset_right = 21114.0
+offset_bottom = 3585.0
+scale = Vector2(3.1907146, 16.355934)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" parent="." unique_id=57670885 instance=ExtResource("6_2vpo4")]
+offset_left = 21944.0
+offset_top = 3454.0
+offset_right = 21984.0
+offset_bottom = 3494.0
+scale = Vector2(9.466975, 5.7138057)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" parent="." unique_id=118840283 instance=ExtResource("6_2vpo4")]
+offset_left = 21949.0
+offset_top = 3980.0
+offset_right = 21989.0
+offset_bottom = 4020.0
+scale = Vector2(9.466975, 5.7138057)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect6" parent="." unique_id=264079859 instance=ExtResource("6_2vpo4")]
+offset_left = 22070.0
+offset_top = 3545.0
+offset_right = 22110.0
+offset_bottom = 3585.0
+scale = Vector2(3.1907146, 16.355934)
+color = Color(0, 0, 0, 1)
+
+[node name="Solid" parent="." unique_id=1756556701 instance=ExtResource("4_31tao")]
+position = Vector2(11326, -1239)
+scale = Vector2(2.9161873, 56.75277)
