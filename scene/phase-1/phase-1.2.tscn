@@ -327,9 +327,6 @@ position = Vector2(20443.002, -10559)
 rotation = -3.1415927
 scale = Vector2(24.275257, 108.38984)
 
-[node name="Solid43" parent="Map/Solidos" unique_id=227563383 instance=ExtResource("4_31tao")]
-position = Vector2(18920, -11268)
-
 [node name="Solid44" parent="Map/Solidos" unique_id=978228311 instance=ExtResource("4_31tao")]
 position = Vector2(8747, -13632)
 scale = Vector2(863.12976, -26.563372)
@@ -341,6 +338,10 @@ scale = Vector2(132.60327, -6.828577)
 [node name="Barreira" parent="Map/Solidos" unique_id=901455585 instance=ExtResource("2_qponk")]
 position = Vector2(11313, -11579.001)
 scale = Vector2(2.553615, 24.068262)
+
+[node name="Solid43" parent="Map/Solidos" unique_id=1756556701 instance=ExtResource("4_31tao")]
+position = Vector2(11310, -12709)
+scale = Vector2(2.9161873, 56.75277)
 
 [node name="Barreiras" type="Node" parent="Map" unique_id=827758766]
 
@@ -617,7 +618,3 @@ offset_right = 22110.0
 offset_bottom = 3585.0
 scale = Vector2(3.1907146, 16.355934)
 color = Color(0, 0, 0, 1)
-
-[node name="Solid" parent="." unique_id=1756556701 instance=ExtResource("4_31tao")]
-position = Vector2(11326, -1239)
-scale = Vector2(2.9161873, 56.75277)
